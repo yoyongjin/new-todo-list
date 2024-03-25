@@ -1,4 +1,4 @@
-import Info from "assets/ic_info.svg";
+import Info from "@assets/ic_info.svg?react";
 import { LabelHTMLAttributes } from "react";
 import styled from "styled-components";
 import { ICustomStyle } from "../../types/style";
