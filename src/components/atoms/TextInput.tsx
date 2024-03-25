@@ -1,9 +1,12 @@
 import { forwardRef, InputHTMLAttributes } from "react";
+import { UseFormRegisterReturn } from "react-hook-form";
 import styled, { css } from "styled-components";
 import { ICustomStyle } from "../../types/style";
 import { Colors } from "../../utils/constants/colors";
 
-export type InputConfig = InputHTMLAttributes<HTMLInputElement>;
+export interface InputConfig extends InputHTMLAttributes<HTMLInputElement> {
+  register?: UseFormRegisterReturn;
+}
 
 type Props = InputConfig & ICustomStyle;
 
@@ -28,14 +31,16 @@ const Input = styled.input<Props>`
   ${defaultStyles}
 `;
 
-const TextInput = forwardRef<HTMLInputElement, Props>((props, ref) => {
-  return (
-    <Input
-      ref={ref}
-      {...props}
-    />
-  );
-});
+const TextInput = forwardRef<HTMLInputElement, Props>(
+  ({ register, ...rest }) => {
+    return (
+      <Input
+        {...register}
+        {...rest}
+      />
+    );
+  }
+);
 
 TextInput.displayName = "TextInput";
 

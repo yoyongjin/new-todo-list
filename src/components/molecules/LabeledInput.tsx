@@ -1,14 +1,16 @@
+import { UseFormRegisterReturn } from "react-hook-form";
 import styled, { CSSObject } from "styled-components";
+import Atoms from "../atoms";
 import { LabelConfig } from "../atoms/Label";
 import { InputConfig } from "../atoms/TextInput";
-import Atoms from "../atoms";
 
 interface Props {
   isRequired?: boolean;
-  labelConfig?: LabelConfig;
-  inputConfig?: InputConfig;
+  labelConfig: LabelConfig;
+  inputConfig: InputConfig;
   labelStyle?: CSSObject;
   inputStyle?: CSSObject;
+  register: UseFormRegisterReturn;
 }
 
 function LabeledInput({
@@ -17,6 +19,7 @@ function LabeledInput({
   labelStyle,
   inputConfig,
   inputStyle,
+  register,
 }: Props) {
   return (
     <Container>
@@ -28,6 +31,7 @@ function LabeledInput({
       <Atoms.TextInput
         {...inputConfig}
         customStyle={inputStyle}
+        register={register}
       />
     </Container>
   );
