@@ -7,7 +7,10 @@ import TextInput from "../atoms/TextInput";
 
 const Container = styled.form`
   display: flex;
+  justify-content: space-between;
+  width: 50%;
 `;
+
 function AddTodoForm() {
   const [taskText, setTaskText] = useState<string>("");
   const addTodo = useTodoStore((state) => state.addTodo);
@@ -20,11 +23,13 @@ function AddTodoForm() {
       <TextInput
         onChange={(e) => setTaskText(e.target.value)}
         value={taskText}
+        customStyle={{ width: "60%" }}
       />
       <TextButton
         onClick={() =>
           addTodo({ id: uid(taskText), task: taskText, isCompleted: false })
         }
+        customStyle={{ width: "30%" }}
       />
     </Container>
   );

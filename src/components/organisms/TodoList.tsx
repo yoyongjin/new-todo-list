@@ -13,20 +13,24 @@ const Ul = styled.ul`
   justify-content: center;
   border: 1px solid ${Colors.gray_D7};
   width: 50%;
+  gap: 8px;
+  padding: 8px;
 `;
+
+const Li = styled.li``;
 
 function TodoList({ items }: Props) {
   return (
     <Ul>
       {items.map((item) => {
         return (
-          <li>
+          <Li key={item.id}>
             <TodoItem
               id={item.id}
               task={item.task}
               isCompleted={item.isCompleted}
             />
-          </li>
+          </Li>
         );
       })}
     </Ul>
