@@ -24,7 +24,10 @@
     /* Path */
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@*": ["src/*"],
+      "@components": ["src/components/*"],
+      "@assets": ["src/assets/*"],
+      "@api": ["src/api/*"]
       // 기타 alias 설정
     }
   },
