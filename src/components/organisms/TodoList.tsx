@@ -28,7 +28,7 @@ function TodoList({ items }: Props) {
             <TodoItem
               id={item.id}
               task={item.task}
-              isCompleted={item.isCompleted}
+              isComplete={item.isComplete}
             />
           </Li>
         );

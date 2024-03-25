@@ -27,7 +27,7 @@ function AddTodoForm() {
       />
       <TextButton
         onClick={() =>
-          addTodo({ id: uid(taskText), task: taskText, isCompleted: false })
+          addTodo({ id: uid(taskText), task: taskText, isComplete: false })
         }
         customStyle={{ width: "30%" }}
       />
