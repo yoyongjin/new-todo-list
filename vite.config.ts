@@ -9,8 +9,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@components": resolve(__dirname, "src/components"),
-      "@atoms": resolve(__dirname, "src/components/atoms"),
-      "@molecules": resolve(__dirname, "src/components/atoms"),
+      "@assets": resolve(__dirname, "src/assets"),
     },
   },
 });
