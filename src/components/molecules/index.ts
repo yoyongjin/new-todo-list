@@ -2,10 +2,10 @@ import AddTodoForm from "./AddTodoForm";
 import LabeledInput from "./LabeledInput";
 import TodoItem from "./TodoItem";
 
-const Molecule = {
+const Molecules = {
   AddTodoForm,
   TodoItem,
   LabeledInput,
 };
 
-export default Molecule;
+export default Molecules;
